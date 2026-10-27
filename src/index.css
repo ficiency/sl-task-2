@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Segoe UI", "Helvetica Neue", sans-serif;
+  --color-paper: #f3efe6;
+  --color-ink: #1c1915;
+  --color-muted: #5e574c;
+  --color-card: #fffdf8;
+  --color-line: #e3d9c8;
+  --color-pine: #1d4334;
+  --color-pine-soft: #e7f2eb;
+  --color-brass: #8a5a22;
+  --color-warn: #8c3412;
+  --color-warn-soft: #f8ebe3;
+}
+
+body {
+  margin: 0;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+#kpis,
+#deal-tabs {
+  scroll-margin-top: 3.5rem;
+}
+
+.tip {
+  position: relative;
+}
+
+.tip-box {
+  display: none;
+  position: absolute;
+  z-index: 30;
+  left: 0;
+  top: calc(100% + 0.35rem);
+  width: 18rem;
+  padding: 0.6rem 0.7rem;
+  border: 1px solid var(--color-line);
+  border-radius: 0.4rem;
+  background: var(--color-card);
+  color: var(--color-ink);
+  font-size: 0.75rem;
+  line-height: 1.4;
+  box-shadow: 0 8px 24px rgba(28, 25, 21, 0.08);
+}
+
+.tip:hover .tip-box,
+.tip:focus-within .tip-box {
+  display: block;
+}
